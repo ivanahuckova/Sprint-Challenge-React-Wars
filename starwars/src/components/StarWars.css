@@ -20,8 +20,23 @@
 	background-color: #443e3e;
 	color: white;
 	border-radius: 10px;
+	line-height: 2;
+	font-size: 1.2rem;
+	font-weight: lighter;
 }
 
+.character-container h2 {
+	font-size: 1.7rem;
+}
+
+.image-container {
+	width: 100%;
+	padding-top: 20px;
+}
+
+.image-container img {
+	width: 100%;
+}
 @media (max-width: 1200px) {
 	.character-container {
 		width: 40%;
