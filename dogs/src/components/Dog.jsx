@@ -1,8 +1,9 @@
 import React from "react";
+import "./Dog.css";
 
 export default function Dog({ dog }) {
 	return (
-		<div>
+		<div className="dog-container">
 			<img src={dog} />
 		</div>
 	);
