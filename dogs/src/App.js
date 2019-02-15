@@ -11,7 +11,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		this.getCharacters("https://dog.ceo/api/breeds/image/random/15");
+		this.getCharacters("https://dog.ceo/api/breeds/image/random/50");
 	}
 
 	getCharacters = URL => {
