@@ -3,7 +3,7 @@ import "./StarWars.css";
 
 export default function StarWarsDeck({ char }) {
 	return (
-		<div key={char.name}>
+		<div key={char.name} className="character-container">
 			<h2>{char.name}</h2>
 			<div>
 				gender: <span>{char.gender}</span>

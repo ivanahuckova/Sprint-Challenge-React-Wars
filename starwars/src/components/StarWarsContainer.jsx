@@ -4,10 +4,12 @@ import "./StarWars.css";
 
 export default function StarWarsContainer({ starwarsChars }) {
 	return (
-		<div className="sw-container">
-			{starwarsChars.map(char => (
-				<StarWarsDeck key={char.name} char={char} />
-			))}
+		<div className="environment-container">
+			<div className="sw-container">
+				{starwarsChars.map(char => (
+					<StarWarsDeck key={char.name} char={char} />
+				))}
+			</div>
 		</div>
 	);
 }
