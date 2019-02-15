@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import "./App.css";
+import DogContainer from "./components/DogContainer";
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			starwarsChars: []
+			dogs: []
 		};
 	}
 
 	componentDidMount() {
-		this.getCharacters("https://swapi.co/api/people");
+		this.getCharacters("https://dog.ceo/api/breeds/image/random/15");
 	}
 
 	getCharacters = URL => {
@@ -22,7 +23,8 @@ class App extends Component {
 				return res.json();
 			})
 			.then(data => {
-				this.setState({ starwarsChars: data.results });
+				console.log(data);
+				this.setState({ dogs: data.message });
 			})
 			.catch(err => {
 				throw new Error(err);
@@ -30,9 +32,11 @@ class App extends Component {
 	};
 
 	render() {
+		const { dogs } = this.state;
 		return (
 			<div className="App">
 				<h1 className="Header">Doggo Rates</h1>
+				<DogContainer dogs={dogs} />
 			</div>
 		);
 	}

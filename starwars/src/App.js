@@ -24,6 +24,7 @@ class App extends Component {
 			})
 			.then(data => {
 				this.setState({ starwarsChars: data.results });
+				console.log(data.results);
 			})
 			.catch(err => {
 				throw new Error(err);
@@ -32,6 +33,7 @@ class App extends Component {
 
 	render() {
 		const { starwarsChars } = this.state;
+
 		return (
 			<div className="App">
 				<h1 className="Header">React Wars</h1>
